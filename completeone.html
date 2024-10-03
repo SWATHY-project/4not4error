@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soles4Souls Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .top-banner {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .top-banner a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo img {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-buttons a {
+            border: 1px solid black;
+            padding: 8px 15px;
+            margin-left: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .donate-btn {
+            border-color: #33ccff;
+            color: #33ccff;
+        }
+
+        .give-shoes-btn {
+            border-color: black;
+            color: black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin-left: 30px; /* Shifts the entire menu to the right */
+        }
+
+        nav ul li {
+            margin-right: 10px;
+            padding-left: 10px; /* Adds space to the left of each item */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .search-cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-cart input {
+            border: 1px solid black;
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+
+        .search-btn {
+            border: 1px solid black;
+            background-color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .cart-btn {
+            background-color: white;
+            border: none;
+            font-size: 18px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .text-content {
+            flex: 1;
+            margin: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .search-container {
+            margin-top: 20px;
+        }
+
+        .search-box {
+            border: 2px solid #000;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        .search-button, .home-button {
+            border: 2px solid #000;
+            padding: 10px;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: #000;
+            display: inline-block;
+        }
+
+        .home-button {
+            border-left: 2px solid #000;
+        }
+
+        .search-button:hover, .home-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 30px;
+            margin-top: 10px;
+        }
+
+        .footer-socials a {
+            margin-right: 15px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer-logos img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .footer-links-section {
+            display: flex;
+            flex: 2;
+            justify-content: space-around;
+            margin-top: 50px; /* Increased margin-top to push the sections further down */
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .nonprofit-paragraph {
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header-main, nav, .container, .search-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 5px;
+            }
+
+            .footer-logos, .footer-socials {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-logos img, .footer-socials img {
+                margin: 5px;
+            }
+
+            .search-box, .search-button, .home-button {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-banner">
+            <p>Soles4Souls mourns the loss of our CFO and long-time staff member, Robert Adams-Ghee. 
+                <a href="#">See our tribute to him here.</a>
+            </p>
+        </div>
+        <div class="header-main">
+            <div class="logo">
+                <img src="https://github.com/SWATHY-project/4not4error/raw/main/Screenshot_2024-10-02_134437-removebg-preview.png" alt="Soles4Souls Logo">
+            </div>
+            <div class="header-buttons">
+                <a href="#" class="donate-btn">Donate ↗</a>
+                <a href="#" class="give-shoes-btn">Give Shoes ↗</a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Who We Are ▼</a></li>
+                <li><a href="#">Our Work ▼</a></li>
+                <li><a href="#">Get Involved ▼</a></li>
+                <li><a href="#">Resources ▼</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+            <div class="search-cart">
+                <input type="text" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+                <button class="cart-btn">🛒</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Middle Section -->
+    <div class="container">
+        <div class="text-content">
+            <h1>Something’s missing...</h1>
+            <p>We can’t find the page you’re looking for. <br> Search for a page that you need or go back home.</p>
+            
+            <div class="search-container">
+                <input class="search-box" type="text" placeholder="Search...">
+                <a href="#" class="home-button">Home Page ➡</a>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="https://github.com/SWATHY-project/4not4error/raw/main/7-removebg-preview.png" alt="Decorative Image">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+            <!-- Footer Logo Section -->
+            <div style="flex: 1; min-width: 250px; padding-right: 20px;">
+                <div>
+                    <a href="#">
+                        <img src="https://github.com/SWATHY-project/4not4error/raw/main/Screenshot_2024-10-02_134437-removebg-preview.png" alt="Screenshot Preview">
+                    </a>
+                    <p class="nonprofit-paragraph">Soles4Souls is a registered <br> 501(c)3 Non-profit Organization.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Footer Links Section -->
+            <div class="footer-links-section">
+                <div style="min-width: 150px;">
+                    <h4 style="font-size: 16px; margin-bottom: 10px;">Our Locations</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="font-size: 14px; margin-bottom: 5px;">USA</li>
+                        <li style="font-size: 14px; margin-bottom: 5px;">Canada</li>
+                        <li style="font-size: 14px; margin-bottom: 5px;">Europe</li>
+                    </ul>
+                </div>
+
+                <div style="min-width: 150px;">
+                    <h4 style="font-size: 16px; margin-bottom: 10px;">Learn More</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="font-size: 14px; margin-bottom: 5px;">Read Our Blog</li>
+                        <li style="font-size: 14px; margin-bottom: 5px;">Subscribe to Emails</li>
+                        <li style="font-size: 14px; margin-bottom: 5px;">Careers</li>
+                    </ul>
+                </div>
+
+                <div style="min-width: 150px;">
+                    <h4 style="font-size: 16px; margin-bottom: 10px;">Requests</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="font-size: 14px; margin-bottom: 5px;">Request Shoes</li>
+                        <li style="font-size: 14px; margin-bottom: 5px;">Request a Receipt</li>
+                    </ul>
+                </div>
+
+                <div style="min-width: 150px;">
+                    <h4 style="font-size: 16px; margin-bottom: 10px;">Send Us a Note</h4>
+                    <a href="your-contact-page-url" class="contact-us-btn">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Footer Images Section -->
+            <div style="flex: 1; display: flex; justify-content: flex-end;">
+                <div class="footer-logos">
+                    <img src="https://github.com/SWATHY-project/4not4error/raw/main/1-removebg-preview.png" alt="Image 1">
+                    <img src="https://github.com/SWATHY-project/4not4error/raw/main/2-removebg-preview.png" alt="Image 2">
+                    <img src="https://github.com/SWATHY-project/4not4error/raw/main/3-removebg-preview__.png" alt="Image 3">
+                    <img src="https://github.com/SWATHY-project/4not4error/raw/main/4-removebg-preview.png" alt="Image 4">
+                    <img src="https://github.com/SWATHY-project/4not4error/raw/main/5-removebg-preview.png" alt="Image 5">
+                    <img src="https://github.com/SWATHY-project/4not4error/raw/main/6-removebg-preview.png" alt="Image 6">
+                </div>
+ </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p>Privacy Policy | Staff | © 2024 Soles4Souls</p>
+        </div>
+    </footer>
+
+</body>
+</html>
